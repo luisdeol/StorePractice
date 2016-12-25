@@ -1,2 +1,0 @@
-# StorePractice
-ASP.NET Core
