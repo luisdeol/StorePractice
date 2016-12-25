@@ -1,0 +1,14 @@
+﻿@model Manufacturers_Test.Models.Manufacturer
+@{
+    ViewBag.Title = "Delete confirmation";
+}
+
+ 
+<h2> Do you really want to delete @Html.DisplayFor(modelItem=> Model.ManufacturerName) ? </h2>
+
+<form asp-action="Delete">
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</form>

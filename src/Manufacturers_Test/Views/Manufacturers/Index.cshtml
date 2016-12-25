@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Manufacturers_Test.Models.Manufacturer>
+@{
+    ViewBag.Title = "Manufacturers";
+}
+
+<p>
+    <a asp-controller="Manufacturers" asp-action="Create"> New Manufacturer </a>
+</p>
+
+<table class="table">
+    <tr>
+        <th> ManufacturerId</th>
+        <th> ManufacturerName </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @Html.DisplayFor(modelItem => item.ManufacturerId) </td>
+            <td> @Html.DisplayFor(modelItem => item.ManufacturerName) </td>
+            <td> @Html.ActionLink("Details", "Details", new { id = item.ManufacturerId })</td>
+            <td> @Html.ActionLink("Delete", "Delete", new { id = item.ManufacturerId })</td>
+        </tr>
+    }
+</table>
